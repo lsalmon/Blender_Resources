@@ -1,0 +1,12 @@
+import bpy
+from bpy import context
+
+armature = "metarig" 
+
+tail = bpy.data.objects[armature].location + context.active_pose_bone.tail
+head = bpy.data.objects[armature].location + context.active_pose_bone.head
+
+print("tail: ")
+print(tail)
+print(" head: ")
+print(head)
